@@ -99,7 +99,7 @@ export default function ProfilePage() {
   src={
     profileImage instanceof File 
       ? URL.createObjectURL(profileImage) 
-      : `http://localhost:3001${profileImage}`
+      : `https://authapp-dpnq.onrender.com${profileImage}`
   } 
   alt="Profile" 
   className="mt-4 h-20 w-20 rounded-full"
