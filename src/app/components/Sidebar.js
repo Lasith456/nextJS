@@ -13,7 +13,7 @@ export default function Sidebar({ children }) {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/check-user", {
+        const response = await fetch("https://authapp-dpnq.onrender.com/api/check-user", {
           credentials: "include", // Ensures cookies are sent
         });
   
@@ -35,7 +35,7 @@ export default function Sidebar({ children }) {
   // Logout function
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/logout", {
+      const response = await fetch("https://authapp-dpnq.onrender.com/api/logout", {
         method: "POST",
         credentials: "include",
       });
