@@ -11,7 +11,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/user/profile', {
+        const response = await axios.get('https://authapp-dpnq.onrender.com/api/user/profile', {
           withCredentials: true,
         });
         const data = response.data;
@@ -40,7 +40,7 @@ export default function ProfilePage() {
     }
 
     try {
-      const response = await axios.put('http://localhost:3001/api/update-profile', formData, {
+      const response = await axios.put('https://authapp-dpnq.onrender.com/api/update-profile', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

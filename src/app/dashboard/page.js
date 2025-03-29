@@ -18,7 +18,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchSentimentCounts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/reviews/counts');
+        const response = await fetch('https://authapp-dpnq.onrender.com/api/reviews/counts');
         if (!response.ok) throw new Error('Network response was not ok.');
         const data = await response.json();
         setSentimentCounts({
@@ -33,7 +33,7 @@ export default function Dashboard() {
     };
 
     fetchSentimentCounts();
-    fetch('http://localhost:3001/api/reviews')
+    fetch('https://authapp-dpnq.onrender.com/api/reviews')
       .then(response => response.json())
       .then(data => setReviews(data))
       .catch(error => console.error('Error fetching reviews:', error));

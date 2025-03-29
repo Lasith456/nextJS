@@ -30,7 +30,7 @@ export default function UploadPage() {
         formData.append("file", file);
 
         try {
-            const response = await axios.post("http://localhost:3001/api/upload", formData, {
+            const response = await axios.post("https://authapp-dpnq.onrender.com/api/upload", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },

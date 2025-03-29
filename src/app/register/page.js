@@ -17,7 +17,7 @@ export default function Register() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3001/api/signup", { fullName, email, password });
+      const response = await axios.post("https://authapp-dpnq.onrender.com/api/signup", { fullName, email, password });
       alert(response.data.message); // Show success message
       localStorage.setItem("token", response.data.token); // Store token
       router.push("/dashboard"); // Redirect after registration

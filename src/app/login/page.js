@@ -16,7 +16,7 @@ export default function Login() {
     setError("");
   
     try {
-      const response = await axios.post("http://localhost:3001/api/login", { email, password }, { 
+      const response = await axios.post("https://authapp-dpnq.onrender.com/api/login", { email, password }, { 
         withCredentials: true, // Ensures cookies are included
       });
   
